@@ -1,5 +1,6 @@
 package com.inflearn.springbootwithjpa.domain;
 
+import com.inflearn.springbootwithjpa.domain.item.Item;
 import lombok.Getter;
 import lombok.Setter;
 
