@@ -24,8 +24,13 @@ public class Order {
     @OneToMany(mappedBy = "order")
     private List<OrderItem> orderItems = new ArrayList<>();
 
+    @OneToOne
+    @JoinColumn(name="delivery_id")
+    private Delivery delivery;
+
     // private Date date; -> Java8이전에 쓰던 방식 지금은 아래와 같이 사용
     private LocalDateTime orderDate;
 
+    @Enumerated(EnumType.STRING)
     private OrderStatus status; // Enum 타입으로 주문상태를 나타냄 (ORDER, CANCEL)
 }
