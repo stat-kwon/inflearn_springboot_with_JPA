@@ -1,5 +1,6 @@
 package com.inflearn.springbootwithjpa;
 
+import com.inflearn.springbootwithjpa.domain.Member;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
