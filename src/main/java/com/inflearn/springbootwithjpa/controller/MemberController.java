@@ -1,13 +1,10 @@
 package com.inflearn.springbootwithjpa.controller;
 
-import com.inflearn.springbootwithjpa.domain.Address;
-import com.inflearn.springbootwithjpa.domain.Member;
 import com.inflearn.springbootwithjpa.service.MemberService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 @RequiredArgsConstructor
@@ -21,12 +18,12 @@ public class MemberController {
         return "members/createMemberForm";
     }
 
-    @PostMapping("/member/new")
-    public String create(MemberForm form) {
-
-        Address address = new Address(form.getCity(), form.getName(), form.getZipcode());
-
-        Member member = new Member();
-        member.setName(form.getName());
-    }
+//    @PostMapping("/member/new")
+//    public String create(MemberForm form) {
+//
+//        Address address = new Address(form.getCity(), form.getName(), form.getZipcode());
+//
+//        Member member = new Member();
+//        member.setName(form.getName());
+//    }
 }
